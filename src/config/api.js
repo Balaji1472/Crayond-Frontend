@@ -1,5 +1,5 @@
 // File: src/config/api.js
-export const API_BASE_URL = 'http://localhost:8000';
+export const API_BASE_URL = 'https://crayond-backend.onrender.com';
 
 // Simple fetch wrapper with better error handling
 export async function fetchApi(endpoint, options = {}) {
