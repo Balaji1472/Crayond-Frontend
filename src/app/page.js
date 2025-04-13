@@ -18,7 +18,6 @@ export default function Home() {
   const [apiStatus, setApiStatus] = useState({})
   const [similarResults, setSimilarResults] = useState([])
   const [connectionError, setConnectionError] = useState(null)
-  const [typingAnimation, setTypingAnimation] = useState(false)
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
 
