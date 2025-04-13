@@ -1,86 +1,190 @@
-
-.statusContainer {
+/* .container {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.3s ease;
-}
-
-.statusDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  gap: 10px;
   position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #2d3748;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
 }
 
-.statusDot::after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
+.container:hover {
+  background-color: #edf2f7;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  animation: pulse 2s infinite;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
-.connected {
-  background-color: #48BB78;
+.online {
+  background-color: #22c55e;
 }
 
-.connected::after {
-  border: 2px solid rgba(72, 187, 120, 0.5);
+.partial {
+  background-color: #fbbf24;
 }
 
-.disconnected {
-  background-color: #F56565;
+.connecting {
+  background-color: #a0aec0;
+  animation: pulse 1.5s infinite;
 }
 
-.disconnected::after {
-  border: 2px solid rgba(245, 101, 101, 0.5);
-}
-
-.unknown {
-  background-color: #ECC94B;
-}
-
-.unknown::after {
-  border: 2px solid rgba(236, 201, 75, 0.5);
+.offline {
+  background-color: #ef4444;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.3);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.6; transform: scale(1); }
 }
 
-.statusText {
+.statusDetails {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  min-width: 220px;
+  z-index: 100;
+  display: none;
+}
+
+.container:hover .statusDetails {
+  display: block;
+}
+
+.statusDetails p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #1a202c;
+}
+
+.statusDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.statusDetails li {
   font-size: 13px;
-  font-weight: 500;
+  margin-bottom: 6px;
+  color: #4a5568;
+} */
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #2d3748;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
 }
 
-.connected .statusText {
-  color: #2F855A;
+.container:hover {
+  background-color: #edf2f7;
 }
 
-.disconnected .statusText {
-  color: #C53030;
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 
-.unknown .statusText {
-  color: #B7791F;
+.online {
+  background-color: #22c55e;
+}
+
+.partial {
+  background-color: #fbbf24;
+}
+
+.connecting {
+  background-color: #a0aec0;
+  animation: pulse 1.5s infinite;
+}
+
+.offline {
+  background-color: #ef4444;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+.statusDetails {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  min-width: 220px;
+  z-index: 100;
+  display: none;
+}
+
+.container:hover .statusDetails {
+  display: block;
+}
+
+.statusDetails p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #1a202c;
+}
+
+.statusDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.statusDetails li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #4a5568;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .statusDetails {
+    min-width: 180px;
+    padding: 10px 12px;
+    right: -50px;
+  }
 }

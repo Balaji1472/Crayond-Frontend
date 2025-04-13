@@ -1,5 +1,4 @@
 
-
 // File: src/app/page.js
 'use client'
 
@@ -19,7 +18,6 @@ export default function Home() {
   const [similarResults, setSimilarResults] = useState([])
   const [connectionError, setConnectionError] = useState(null)
   const messagesEndRef = useRef(null)
-  const inputRef = useRef(null)
 
   // Fetch API status on component mount
   useEffect(() => {
@@ -53,11 +51,6 @@ export default function Home() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
-  // Focus input on load
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
@@ -101,19 +94,13 @@ export default function Home() {
         setSessionId(data.session_id);
       }
       
-      // Set typing animation
-      setTypingAnimation(true);
+      // Add bot response to chat
+      setMessages((prev) => [...prev, { role: 'assistant', content: data.response }]);
       
-      // Add bot response to chat after a brief delay for typing effect
-      setTimeout(() => {
-        setTypingAnimation(false);
-        setMessages((prev) => [...prev, { role: 'assistant', content: data.response }]);
-        
-        // Update similar questions
-        if (data.similar_results && data.similar_results.length > 0) {
-          setSimilarResults(data.similar_results);
-        }
-      }, 500);
+      // Update similar questions
+      if (data.similar_results && data.similar_results.length > 0) {
+        setSimilarResults(data.similar_results);
+      }
       
     } catch (error) {
       console.error('Error sending message:', error);
@@ -123,18 +110,12 @@ export default function Home() {
         content: 'Sorry, I encountered an error connecting to the backend. Please check that the API server is running.' 
       }]);
     } finally {
-      setTimeout(() => {
-        setLoading(false);
-        // Focus input after response is received
-        inputRef.current?.focus();
-      }, 500);
+      setLoading(false);
     }
   };
   
   const handleSimilarQuestionClick = (question) => {
     setInput(question);
-    // Focus on input when similar question is clicked
-    inputRef.current?.focus();
   };
 
   return (
@@ -165,8 +146,7 @@ export default function Home() {
               messages.map((message, index) => (
                 <ChatMessage 
                   key={index} 
-                  message={message}
-                  isLast={index === messages.length - 1}
+                  message={message} 
                 />
               ))
             )}
@@ -190,7 +170,6 @@ export default function Home() {
         
         <form className={styles.inputForm} onSubmit={handleSendMessage}>
           <input
-            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}

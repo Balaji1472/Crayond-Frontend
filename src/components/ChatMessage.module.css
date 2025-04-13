@@ -1,108 +1,142 @@
-
-.messageContainer {
+/* .messageContainer {
   display: flex;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  animation: fadeInSlide 0.5s ease-out;
-  max-width: 95%;
-}
-
-@keyframes fadeInSlide {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-bottom: 16px;
+  max-width: 85%;
+  transition: all 0.3s ease-in-out;
 }
 
 .userMessage {
+  align-self: flex-end;
   margin-left: auto;
-  background-color: rgba(102, 103, 171, 0.08);
+  flex-direction: row-reverse;
 }
 
 .assistantMessage {
-  margin-right: auto;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(197, 213, 234, 0.4);
+  align-self: flex-start;
 }
 
-.lastMessage {
-  animation: highlight 2s ease-out;
-}
-
-@keyframes highlight {
-  0% {
-    box-shadow: 0 0 0 2px rgba(102, 103, 171, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
-  }
-}
-
-.avatarContainer {
-  display: flex;
-  align-items: flex-start;
-}
-
-.userAvatar, .assistantAvatar {
-  width: 36px;
-  height: 36px;
+.avatar {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.userAvatar {
-  background: linear-gradient(45deg, #8B9DC3, #6667AB);
-  color: white;
-}
-
-.assistantAvatar {
-  background: linear-gradient(45deg, #6667AB, #C5D5EA);
-  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .messageContent {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-}
-
-.messageHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4px;
-}
-
-.messageSender {
-  font-weight: 600;
-  font-size: 14px;
-  color: #2D3047;
-}
-
-.messageTime {
-  font-size: 12px;
-  color: #718096;
 }
 
 .messageText {
-  font-size: 15px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  font-size: 16px;
   line-height: 1.6;
-  color: #4A5568;
   white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
 }
 
 .userMessage .messageText {
-  color: #2D3047;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.assistantMessage .messageText {
+  background: #f4f6fb;
+  color: #2d3748;
+  border-bottom-left-radius: 6px;
+} */
+
+
+.messageContainer {
+  display: flex;
+  margin-bottom: 16px;
+  max-width: 85%;
+  transition: all 0.3s ease-in-out;
+}
+
+.userMessage {
+  align-self: flex-end;
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 0 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.messageContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageText {
+  padding: 14px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+}
+
+.userMessage .messageText {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.assistantMessage .messageText {
+  background: #f4f6fb;
+  color: #2d3748;
+  border-bottom-left-radius: 6px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .messageContainer {
+    max-width: 90%;
+    margin-bottom: 12px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    margin: 0 8px;
+  }
+
+  .messageText {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .messageContainer {
+    max-width: 80%;
+  }
 }
