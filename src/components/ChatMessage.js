@@ -1,4 +1,3 @@
-// File: ChatMessage.js
 
 import React from 'react';
 import styles from './ChatMessage.module.css';
