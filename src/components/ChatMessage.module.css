@@ -58,8 +58,7 @@
   border-bottom-left-radius: 6px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .messageContainer {
     max-width: 90%;
     margin-bottom: 12px;
@@ -83,3 +82,22 @@
     max-width: 80%;
   }
 }
+
+
+
+@media (max-width: 480px) {
+  .messageText {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .messageContainer {
+    max-width: 100%;
+  }
+} 

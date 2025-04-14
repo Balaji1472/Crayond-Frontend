@@ -1,7 +1,6 @@
 
 
-
-.container {
+ .container {
   width: 300px;
   border-left: 1px solid #e2e8f0;
   padding: 20px;
@@ -67,7 +66,6 @@
   margin-top: 6px;
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
   .container {
     position: fixed;
@@ -86,5 +84,25 @@
 @media (min-width: 1025px) {
   .container {
     display: block !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    right: -100vw;
+  }
+
+  .container.active {
+    transform: translateX(-100vw);
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .questionButton {
+    font-size: 14px;
   }
 }

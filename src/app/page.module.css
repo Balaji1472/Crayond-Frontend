@@ -169,7 +169,7 @@
   cursor: not-allowed;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .container {
     height: 95vh;
@@ -209,3 +209,9 @@
     max-width: 90%;
   }
 }
+
+
+
+
+
+
