@@ -84,37 +84,4 @@
   color: #4a5568;
 }
 
-@media (max-width: 768px) {
-  .container {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-
-  .indicator {
-    width: 10px;
-    height: 10px;
-  }
-
-  .statusDetails {
-    min-width: 180px;
-    padding: 10px 12px;
-    right: -50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .statusDetails {
-    font-size: 12px;
-    right: -40px;
-    min-width: 160px;
-    padding: 8px 10px;
-  }
-
-  .statusDetails p {
-    font-size: 13px;
-  }
-
-  .statusDetails li {
-    font-size: 12px;
-  }
-} 
+ 
