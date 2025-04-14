@@ -492,3 +492,78 @@
     display: block;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .container {
+    height: 100vh;
+    border-radius: 0;
+    max-width: 100%;
+  }
+  
+  .main {
+    padding: 0;
+  }
+  
+  /* Fix header alignment on mobile */
+  .header {
+    padding: 16px 20px; /* Reduce padding on mobile */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    font-size: 22px; /* Slightly smaller font size on mobile */
+  }
+  
+  /* Fix input form and send button alignment */
+  .inputForm {
+    padding: 12px 16px; /* Less padding on mobile */
+    gap: 10px; /* Ensure consistent spacing */
+  }
+  
+  .input {
+    padding: 12px 14px; /* Slightly smaller input padding */
+    font-size: 15px;
+  }
+  
+  .sendButton {
+    padding: 0 15px; /* Narrower button on mobile */
+    min-width: 70px; /* Ensure minimum width */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 15px;
+  }
+
+  /* Improve MobileNavbar styling */
+  .mobileNavbar {
+    padding: 12px 16px;
+    justify-content: space-between;
+  }
+  
+  /* Ensure MobileSidebar doesn't overlap with other elements */
+  .mobileSidebar {
+    top: 0;
+    height: 100%;
+  }
+}
+
+/* Further optimization for very small screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 14px 16px;
+  }
+  
+  .header h1 {
+    font-size: 20px;
+  }
+  
+  .sendButton {
+    padding: 0 12px;
+    min-width: 60px;
+  }
+  
+  .input {
+    padding: 10px 12px;
+  }
+}
