@@ -1,128 +1,61 @@
-# 🚀 StartupBuddy Frontend
+# 🚀 Startup Buddy Chatbot
 
-This is the **Frontend** of the **StartupBuddy** chatbot, built with **Next.js** and deployed on **Vercel**. It communicates with the backend via REST APIs to handle chat functionality and present responses in a clean UI.
-
----
-
-## 💠 Tech Stack
-
-- **Next.js** – React framework for server-side rendering and static site generation  
-- **CSS** – For custom styling and layout  
-- **JavaScript** - Used for scripting  
-- **Vercel** – For fast and easy frontend deployment  
+A smart AI-powered chatbot designed to assist early-stage startup founders with queries related to funding, legal structure, business planning, and more. Built as part of the Crayond Geni Internship Program.
 
 ---
 
-## 📁 Project Structure
+## 📌 Project Overview
 
-```
-startupbuddy-frontend/
-│
-├── public/                 # Static assets
-├── src/                    # App logic and components
-│   └── ...                 # Custom components and pages
-├── .gitignore              # Git ignored files
-├── eslint.config.mjs       # ESLint configuration
-├── next.config.js          # Next.js configuration
-├── package.json            # Project metadata and scripts
-├── package-lock.json       # Dependency lock file
-├── README.md               # Project documentation (this file)
-├── test.html               # Test HTML file (if needed)
-└── tsconfig.json           # TypeScript config (optional)
-```
+This project is a full-stack AI chatbot application built using **Next.js** for the frontend and **Python (FastAPI)** for the backend. It leverages Google's **Gemini LLM** and **Gemini Embeddings** for understanding and generating contextual responses.
 
 ---
 
-## 🔧 Setup Instructions
+## 🌐 Live Demos
 
-### 1. Clone the Repository
+### 🖥️ Main Application (Frontend)
+- **Frontend Deployment (Vercel)**: [https://your-frontend.vercel.app](https://crayond-frontend.vercel.app/)
+- Built using **Next.js**, styled with modern UI components, and connected to the backend API.
 
-```bash
-git clone https://github.com/Balaji1472/Crayond-frontend.git
-cd Crayond-frontend
-```
+### 🧪 Additional Demo (Streamlit)
+- **Streamlit Demo**: [https://your-streamlit-app.streamlit.app](https://startup-buddy-q-a-application-ibwrkzodysig6habcnncaj.streamlit.app/)
+- A simplified interface built with **Streamlit** to quickly test the chatbot's functionality and showcase LLM integration independently.
 
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
-### 3. Create Environment File
-
-Create a `.env.local` file to store environment variables:
-
-```
-NEXT_PUBLIC_API_URL=https://your-backend-api-url.onrender.com
-```
-
-> Replace with your actual backend Render URL.
+> 📝 *Please check both the Vercel and Streamlit demos for a complete view of the submission.*
 
 ---
 
-## 🚀 Run Locally
+## 🛠️ Tech Stack
 
-```bash
-npm run dev
-```
-
-Visit: `http://localhost:3000`
-
----
-
-## 🌐 Deployment (Vercel)
-
-The frontend is deployed on **Vercel**. To deploy:
-
-1. Push your code to GitHub
-2. Visit [https://vercel.com](https://vercel.com) and import the repo
-3. Add environment variable `NEXT_PUBLIC_API_URL`
-4. Deploy the project
+| Layer          | Technology            |
+|----------------|------------------------|
+| Frontend       | Next.js (JavaScript)   |
+| Backend        | Python (FastAPI)       |
+| LLM Provider   | Gemini                 |
+| Embeddings     | Gemini Embeddings      |
+| Hosting (FE)   | Vercel                 |
+| Hosting (BE)   | Render                 |
+| Additional UI  | Streamlit              |
 
 ---
 
-## ✨ Features
+## 📂 Repositories
 
-- Chat interface to interact with the chatbot
-- Dynamic messages rendering
-- API status indicator
-- Smooth UI with Tailwind styling
+- **Frontend Repo**: [https://github.com/yourusername/frontend-repo](https://github.com/yourusername/frontend-repo)
+- **Backend Repo**: [https://github.com/yourusername/backend-repo](https://github.com/yourusername/backend-repo)
 
 ---
 
-## 📃 Scripts
-
-| Script       | Description                |
-|--------------|----------------------------|
-| `dev`        | Runs development server    |
-| `build`      | Builds the application     |
-| `start`      | Starts production server   |
-| `lint`       | Runs ESLint checks         |
-
-Run using:
-```bash
-npm run <script>
-```
+## 🎥 Submission Demo
+A 20-second video demo is included showing:
+- Interaction with the chatbot on the main site
+- Streamlit interface in action
+- How the model responds to startup-related prompts
 
 ---
 
-## 📆 Dependencies
-
-```
-next
-react
-react-dom
-tailwindcss
-postcss
-autoprefixer
-```
-
-Add others as needed based on your actual `package.json`.
+Feel free to explore, test, and interact with the chatbot. This submission is designed to highlight practical integration of LLMs in a real-world business support tool.
 
 ---
 
-## 👨‍💼 Author
-
-Developed by [Balaji V]  
-If you found this useful, star the repo and share your feedback!
+**Made with ❤️ by Balaji V**
 
