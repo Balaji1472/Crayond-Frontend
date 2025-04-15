@@ -39,7 +39,7 @@ startupbuddy-frontend/
 
 ```bash
 git clone https://github.com/Balaji1472/Crayond-frontend.git
-cd startupbuddy-frontend
+cd Crayond-frontend
 ```
 
 ### 2. Install Dependencies
