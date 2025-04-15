@@ -40,8 +40,8 @@ This project is a full-stack AI chatbot application built using **Next.js** for 
 
 ## 📂 Repositories
 
-- **Frontend Repo**: [https://github.com/yourusername/frontend-repo](https://github.com/yourusername/frontend-repo)
-- **Backend Repo**: [https://github.com/yourusername/backend-repo](https://github.com/yourusername/backend-repo)
+- **Frontend Repo**: [https://github.com/yourusername/frontend-repo](https://github.com/Balaji1472/Crayond-frontend.git)
+- **Backend Repo**: [https://github.com/yourusername/backend-repo](https://github.com/Balaji1472/Crayond-Backend.git)
 
 ---
 
@@ -53,7 +53,7 @@ A 20-second video demo is included showing:
 
 ---
 
-Feel free to explore, test, and interact with the chatbot. This submission is designed to highlight practical integration of LLMs in a real-world business support tool.
+Feel free to explore, test, and interact with the chatbot.
 
 ---
 
