@@ -38,7 +38,7 @@ startupbuddy-frontend/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/startupbuddy-frontend.git
+git clone https://github.com/Balaji1472/Crayond-frontend.git
 cd startupbuddy-frontend
 ```
 
