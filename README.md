@@ -46,7 +46,7 @@ This project is a full-stack AI chatbot application built using **Next.js** for 
 ---
 
 ## 🎥 Submission Demo
-A 20-second video demo is included showing:
+A 40-second video demo is included showing:
 - Interaction with the chatbot on the main site
 - Streamlit interface in action
 - How the model responds to startup-related prompts
