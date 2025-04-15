@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 StartupBuddy Frontend
 
-## Getting Started
+This is the **Frontend** of the **StartupBuddy** chatbot, built with **Next.js** and deployed on **Vercel**. It communicates with the backend via REST APIs to handle chat functionality and present responses in a clean UI.
 
-First, run the development server:
+---
+
+## 💠 Tech Stack
+
+- **Next.js** – React framework for server-side rendering and static site generation  
+- **CSS** – For custom styling and layout  
+- **JavaScript** - Used for scripting  
+- **Vercel** – For fast and easy frontend deployment  
+
+---
+
+## 📁 Project Structure
+
+```
+startupbuddy-frontend/
+│
+├── public/                 # Static assets
+├── src/                    # App logic and components
+│   └── ...                 # Custom components and pages
+├── .gitignore              # Git ignored files
+├── eslint.config.mjs       # ESLint configuration
+├── next.config.js          # Next.js configuration
+├── package.json            # Project metadata and scripts
+├── package-lock.json       # Dependency lock file
+├── README.md               # Project documentation (this file)
+├── test.html               # Test HTML file (if needed)
+└── tsconfig.json           # TypeScript config (optional)
+```
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/startupbuddy-frontend.git
+cd startupbuddy-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Create Environment File
+
+Create a `.env.local` file to store environment variables:
+
+```
+NEXT_PUBLIC_API_URL=https://your-backend-api-url.onrender.com
+```
+
+> Replace with your actual backend Render URL.
+
+---
+
+## 🚀 Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deployment (Vercel)
 
-## Learn More
+The frontend is deployed on **Vercel**. To deploy:
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Visit [https://vercel.com](https://vercel.com) and import the repo
+3. Add environment variable `NEXT_PUBLIC_API_URL`
+4. Deploy the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+- Chat interface to interact with the chatbot
+- Dynamic messages rendering
+- API status indicator
+- Smooth UI with Tailwind styling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📃 Scripts
+
+| Script       | Description                |
+|--------------|----------------------------|
+| `dev`        | Runs development server    |
+| `build`      | Builds the application     |
+| `start`      | Starts production server   |
+| `lint`       | Runs ESLint checks         |
+
+Run using:
+```bash
+npm run <script>
+```
+
+---
+
+## 📆 Dependencies
+
+```
+next
+react
+react-dom
+tailwindcss
+postcss
+autoprefixer
+```
+
+Add others as needed based on your actual `package.json`.
+
+---
+
+## 👨‍💼 Author
+
+Developed by [Balaji V]  
+If you found this useful, star the repo and share your feedback!
+
